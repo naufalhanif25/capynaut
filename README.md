@@ -26,28 +26,7 @@
     npm install capynaut
     ```
 
-2. Include **Capynaut** on your page before the closing `</body>` tag
-    ```html
-    <script type="importmap">
-        {
-            "imports": {
-                "capynaut": "./local-path-to-capynaut"
-            }
-        }
-    </script>
-    ```
-    Example:
-    ```html
-    <script type="importmap">
-        {
-            "imports": {
-                "capynaut": "./node_modules/capynaut/dist/index.mjs"
-            }
-        }
-    </script>
-    ```
-
-3. Import **Capynaut** into your Javascript or Typescript file
+2. Import **Capynaut** into your Javascript or Typescript file
     ```javascript
     // esm
     import Capynaut from "capynaut";
@@ -56,12 +35,12 @@
     const Capynaut = require("capynaut");
     ```
 
-4. Create an object from Capynaut constructor
+3. Create an object from Capynaut constructor
     ```javascript
     const capynaut = new Capynaut();
     ```
 
-5. Bind a new keyboard shortcut
+4. Bind a new keyboard shortcut
     ```javascript
     capynaut.bind("s", () => { alert("'s' is pressed"); }, 'This is a description');
     ```
@@ -80,7 +59,7 @@
     // key combination
     capynaut.bind("ctrl+s", () => { alert("'ctrl + s' is pressed"); });
 
-    // multiple keys
+    // multiple key combination
     // 'ctrl+c|v' equal to 'ctrl+c' and 'ctrl+v'
     capynaut.bind("ctrl+c|v", () => { alert("'ctrl + c' or 'ctrl + v' is pressed"); });
 
@@ -200,5 +179,55 @@ There are many similar libraries out there but Capynaut is different from them a
 - Print the shortcuts you pressed with debug mode.
 - Create docs instantly and implement it in your app.
 
-## Try Capynaut
-Download the repo and open `tests/capynaut.html` in your browser.
+## Tests
+Unit tests are run with <a href="https://jestjs.io/">jest</a>.
+
+1. Move to the repo directory
+    ```bash
+    cd path/to/repo
+    ```
+
+2. Install development dependencies
+    ```bash
+    npm install
+    ```
+
+3. Install or link the **Capynaut** library
+    ```bash
+    npm install capynaut
+    ```
+    or
+    ```bash
+    npm link
+    npm link capynaut
+    ```
+
+4. Run tests
+    ```bash
+    npm run test
+    ```
+
+Here are the expected outputs:
+```bash
+> capynaut@0.0.5 test
+> jest
+
+ PASS  tests/capynaut.test.ts
+  Capynaut unit test
+    ✓ Should bind a single key and call the callback on keydown (18 ms)
+    ✓ Should bind key combination (like ctrl+s) and call the callback (4 ms)
+    ✓ Should bind multiple key combination (such as ctrl+c|v) and call the callback (4 ms)
+    ✓ Should bind key and click combination (like ctrl+click) and call the callback (10 ms)
+    ✓ Should allow unbind to release the event handler (4 ms)
+    ✓ Should allow rebind to update registered shortcut (5 ms)
+    ✓ Should disable and enable shortcut (3 ms)
+    ✓ Should destroy all shortcuts and cleans up event listeners (2 ms)
+    ✓ Should return docs correctly in readable and non-readable form (5 ms)
+    ✓ Should print all keys pressed to the console if debug mode is on (3 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       10 passed, 10 total
+Snapshots:   0 total
+Time:        1.58 s
+Ran all test suites.
+```
