@@ -9,7 +9,6 @@
         "module": "ESNext",
         "declaration": true,
         "isolatedModules": true,
-        "noEmit": true,
         "outDir": "dist",
         "skipLibCheck": true
     },
