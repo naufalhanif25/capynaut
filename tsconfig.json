@@ -5,12 +5,12 @@
         "esModuleInterop": true,
         "strictNullChecks": true,
         "target": "ES2020",
-        "moduleResolution": "Node",
-        "module": "ESNext",
+        "moduleResolution": "Node10",
+        "module": "commonjs",
         "declaration": true,
         "isolatedModules": true,
+        "noEmit": true,
         "outDir": "dist",
-        "skipLibCheck": true
     },
     "include": ["src"],
     "exclude": ["node_modules"]

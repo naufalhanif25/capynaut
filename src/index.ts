@@ -22,7 +22,7 @@ type HTMLElementOrDocument = Element | Document;
  *
  * It's useful when you want to make your app feel fast and responsive without handling events manually everywhere.
  */
-export class Capynaut {
+export default class Capynaut {
     /**
      * Internal storage for all registered shortcuts.
      *

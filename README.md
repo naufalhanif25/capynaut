@@ -26,21 +26,42 @@
     npm install capynaut
     ```
 
-2. Import **Capynaut** into your Javascript or Typescript file
-    ```javascript
-    // esm
-    import { Capynaut } from "capynaut";
-
-    // commonjs
-    const { Capynaut } = require("capynaut");
+2. Include **Capynaut** on your page before the closing `</body>` tag
+    ```html
+    <script type="importmap">
+        {
+            "imports": {
+                "capynaut": "./local-path-to-capynaut"
+            }
+        }
+    </script>
+    ```
+    Example:
+    ```html
+    <script type="importmap">
+        {
+            "imports": {
+                "capynaut": "./node_modules/capynaut/dist/index.mjs"
+            }
+        }
+    </script>
     ```
 
-3. Create an object from Capynaut constructor
+3. Import **Capynaut** into your Javascript or Typescript file
+    ```javascript
+    // esm
+    import Capynaut from "capynaut";
+
+    // commonjs
+    const Capynaut = require("capynaut");
+    ```
+
+4. Create an object from Capynaut constructor
     ```javascript
     const capynaut = new Capynaut();
     ```
 
-4. Bind a new keyboard shortcut
+5. Bind a new keyboard shortcut
     ```javascript
     capynaut.bind("s", () => { alert("'s' is pressed"); }, 'This is a description');
     ```
