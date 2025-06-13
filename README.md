@@ -192,7 +192,7 @@
 There are many similar libraries out there but Capynaut is different from them all, what are the differences?
 - No external dependencies, no framework required.
 - Easy to understand and use.
-- Works with any keyboard layout
+- Works with any keyboard layout.
 - You can create shortcuts with any key combination, such as `s`, `ctrl+s`, `ctrl+c|v`, `ctrl+click`, and more.
 - Bind shortcuts, rebind shortcuts at any time, and unbind them when they are no longer needed.
 - Enable and disable shortcuts whenever you want.
