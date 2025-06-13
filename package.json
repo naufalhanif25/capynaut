@@ -8,6 +8,10 @@
   "repository": {
     "url": "https://github.com/naufalhanif25/capynaut"
   },
+  "exports": {
+    "require": "./dist/index.js",
+    "import": "./dist/index/mjs"
+  },
   "scripts": {
     "build": "tsup"
   },

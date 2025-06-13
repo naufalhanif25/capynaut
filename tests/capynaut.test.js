@@ -1,4 +1,4 @@
-import { Capynaut } from "../dist/index.mjs";
+import { Capynaut } from "../dist/index.mjs"
 
 const capynaut = new Capynaut();
 
