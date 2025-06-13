@@ -1,6 +1,6 @@
 {
   "name": "capynaut",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Capynaut is a simple library for handling keyboard and click shortcuts on a specific DOM element or the global document. Capynaut can be used in JavaScript and Typescript.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
