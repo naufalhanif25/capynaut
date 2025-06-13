@@ -196,6 +196,7 @@ There are many similar libraries out there but Capynaut is different from them a
 - You can create shortcuts with any key combination, such as `s`, `ctrl+s`, `ctrl+c|v`, `ctrl+click`, and more.
 - Bind shortcuts, rebind shortcuts at any time, and unbind them when they are no longer needed.
 - Enable and disable shortcuts whenever you want.
+- Destroy all shortcuts and cleans up event listeners if they are no longer needed.
 - Print the shortcuts you pressed with debug mode.
 - Create docs instantly and implement it in your app.
 
