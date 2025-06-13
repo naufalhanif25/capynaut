@@ -8,7 +8,7 @@
 <br>
 
 <div align="center">
-    <img align="center" src="capynaut.png" alt="Capynaut" width="120"></img>
+    <img align="center" src="https://github.com/naufalhanif25/capynaut/blob/main/capynaut.png" alt="Capynaut" width="120"></img>
 </div>
 
 <br>
